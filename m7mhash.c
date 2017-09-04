@@ -488,7 +488,7 @@ int scanhash_m7m_hash_t(int thr_id, uint32_t *pdata, const uint32_t *ptarget,
             sph_sha256 (&ctx_final_sha256, bdata, bytes);
             sph_sha256_close(&ctx_final_sha256, (void*)(hash));
 	}
-	if (n%10 == 0) nanosleep(&cpu_dec_time, NULL);
+//	if (n%10 == 0) nanosleep(&cpu_dec_time, NULL);
 	const unsigned char *hash_ = (const unsigned char *)hash;
 	const unsigned char *target_ = (const unsigned char *)ptarget;
 	for (i = 31; i >= 0; i--) {
